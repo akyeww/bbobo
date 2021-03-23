@@ -1,0 +1,27 @@
+
+<head>
+<title> test </title>
+</head>
+<body>
+<canvas id="canv" width=1024 height=576></canvas>
+<script>
+	const canvas = document.querySelector('#canv')
+    canvas.addEventListener('touchstart', (event) => {
+      const joke = event.touches.length
+      switch (joke) {
+        case 1:
+          console.log('1 touches')
+          break
+        case 2:
+          console.log('2 touches')
+          break
+        case 3:
+          console.log('3 touches')
+          break
+        default:
+          console.log('more than 3')
+          break
+      }
+      })
+</script>
+</body>
