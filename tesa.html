@@ -4,9 +4,11 @@
 </head>
 <body>
 <canvas id="canv" width=1024 height=576></canvas>
+<div id="test" style="font-size: 20px;"></div>
 <script>
+	let idx = 0
 	const canvas = document.querySelector('#canv')
-    canvas.addEventListener('touchstart', (event) => {
+	  canvas.addEventListener('touchstart', (event) => {
       const joke = event.touches.length
       switch (joke) {
         case 1:
@@ -22,6 +24,11 @@
           console.log('more than 3')
           break
       }
-      })
+      let newdiv = document.createElement("p")
+      newdiv.appendChild(document.createTextNode(`${idx}: now ${joke} touches`))
+      const diva = document.querySelector('#test')
+      diva.appendChild(newdiv)
+      idx+=1;
+   })
 </script>
 </body>
